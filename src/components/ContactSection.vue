@@ -17,8 +17,20 @@
                 <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/phone-message.png" alt="phone-message"/> <strong>Número:</strong> +54 9 11 5960-9798
               </h3>
               <h3 class="font-weight-light">
-                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/new-post.png" alt="new-post"/> <strong>Email:</strong> Matiasleonrios@gmail.com
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/20/new-post.png" alt="new-post"/> <strong>Email:</strong> renuevatuserok@gmail.com
               </h3>
+              <br>
+              <div class="fixed-whatsapp-button">
+                <v-btn
+                  color="success"
+                  dark
+                  large
+                  @click="redirectToWhatsApp"
+                >
+                  Solicitar Información
+                </v-btn>
+              </div>
+
             </v-col>
             <v-col cols="12" sm="7">
               <v-form ref="form" v-model="valid" :lazy-validation="lazy">
@@ -71,6 +83,17 @@
 </template>
 
 <style scoped>
+
+.fixed-whatsapp-button {
+  position:static;
+  transform: translate(0%, 50%);
+}
+.v-btn.success {
+  background-color: #25d366 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
 #contact {
   background-color: #f4f7f5;
 }
@@ -118,6 +141,12 @@ export default {
     }
   }),
   methods: {
+    redirectToWhatsApp() {
+      const phoneNumber = "+5491159609798"; // Reemplaza con tu número de teléfono
+      const message = "Buenas, solicito más información sobre sus servicios en 'Renueva Tu Ser'."; // Mensaje predefinido
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    },
     sendEmail() {
       emailjs.send("service_w5vtk7d", "template_0pn5h1a", {
         from_name: this.name,

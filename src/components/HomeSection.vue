@@ -63,7 +63,18 @@
                 </a>
                 <p class="subheading ml-2 mb-0">Ver vídeo</p>
               </div>
+              <div class="fixed-whatsapp-button">
+      <v-btn
+        color="success"
+        dark
+        large
+        @click="redirectToWhatsApp"
+      >
+        Solicitar Información
+      </v-btn>
+    </div>
             </v-col>
+            
             <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
           </v-row>
         </v-col>
@@ -125,6 +136,10 @@
     <div class="svg-border-waves">
       <img src="~@/assets/img/wave2.svg" />
     </div>
+<br>
+<br>
+    
+
   </section>
 </template>
 
@@ -161,6 +176,13 @@ export default {
     },
   },
   methods: {
+    redirectToWhatsApp() {
+      const phoneNumber = "+5491159609798"; // Reemplaza con tu número de teléfono
+      const message = "Buenas, solicito más información sobre sus servicios en 'Renueva Tu Ser'."; // Mensaje predefinido
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    },
+
     ready(event) {
       this.player = event.target;
     },
@@ -295,4 +317,20 @@ export default {
 section {
   position: relative;
 }
+</style>
+
+<style scoped>
+.fixed-whatsapp-button {
+  position:relative;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+.v-btn.success {
+  background-color: #25d366 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
+
 </style>

@@ -50,11 +50,53 @@
         </v-col>
       </v-row>
     </v-container>
+
+    <div class="fixed-whatsapp-button">
+      <v-btn
+      class="whatsapp-button"
+                  color="success"
+                  fab
+                  dark
+                  @click="redirectToWhatsApp"
+      >
+      <v-icon>mdi-whatsapp</v-icon>
+      </v-btn>
+    </div>
+
   </section>
 </template>
 
+<script>
+export default {
+  methods: {
+    redirectToWhatsApp() {
+      const phoneNumber = "+5491159609798"; // Reemplaza con tu número de teléfono
+      const message = "Buenas, solicito más información sobre sus servicios en 'Renueva Tu Ser'."; // Mensaje predefinido
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    },
+  }
+};
+</script>
+
 <style scoped>
+.fixed-whatsapp-button {
+  position:fixed;
+  bottom: 10%;
+  right: 90%;
+  transform: translate(50%, 50%);
+  z-index: 1000;
+  text-align: center;
+  width: 100%;
+}
+.v-btn.success {
+  background-color: #25d366 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
 #about {
   background-color: #f4f7f5;
 }
+
 </style>

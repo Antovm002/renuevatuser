@@ -13,7 +13,7 @@
             <img src="@/assets/img/logo.png" alt="Logo" />
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="title">Calango</v-list-item-title>
+            <v-list-item-title class="title">Renueva Tu Ser</v-list-item-title>
             <v-list-item-subtitle>WEB</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
@@ -95,10 +95,10 @@ export default {
     drawer: null,
     isXs: false,
     items: [
-      ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
+      ["mdi-home-outline", "Inicio", "#hero"],
+      ["mdi-information-outline", "Nosotros", "#features"],
+      ["mdi-information-outline", "Terapias y Tratamientos", "#download"],
+      ["mdi-information-outline", "Centro", "#pricing"],
       ["mdi-email-outline", "Contatos", "#contact"],
     ],
   }),

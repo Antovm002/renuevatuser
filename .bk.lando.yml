@@ -1,0 +1,18 @@
+name: vue-renueva
+proxy:
+  appserver:
+    - vue-renueva.lndo.site:8080
+config:
+  webroot: ./dist
+services:
+  appserver:
+    type: node:19
+    portforward: true
+    overrides:
+      ports:
+        - "8080:8080"
+    ssl: true
+    config:
+      ssl: 
+        cert: ~/.lando/certs/cert.crt
+        key: ~/.lando/certs/cert.pem

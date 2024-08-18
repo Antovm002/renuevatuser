@@ -1,5 +1,5 @@
 <template>
-  <section id="download" style="min-height: 1200px;">
+  <section id="download"> <!-- Ajuste de min-height para mayor espacio -->
     <v-container fluid>
       <v-row align="center" justify="center">
         <v-col cols="12">
@@ -7,58 +7,61 @@
             
             <v-col cols="10" sm="8" class="white--text text-left">
               
-            <h1 class="text-center pt-6 font-weight-light display-2"> <b><u>Terapias y Tratamientos</u></b></h1>
+            <h1 class="text-center pt-6 font-weight-extra-bold display-2 white--text"> <b>"Terapias y Tratamientos"</b></h1>
             
               <br>
               <template>
                 <v-container>
                 <v-row>
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/terapiasocial.jpg" height="200px"></v-img>
-                    <v-card-text>
-                      <div class="text-h5 font-weight-bold">Estrategia para el Cambio</div>
-                      <p class="text-h4 font-weight-black mb-2">Terapia Social</p>
-                      <div class="text-medium-emphasis">
-                        La estrategia socio-pedagógica para el cambio es una metodología que coordina acciones con el objetivo de promover, prevenir y asistir en la evolución personal y social de los individuos.
-                      </div>
-                    </v-card-text>
+                  <v-col cols="12" md="4" class="mb-4">
+                    <v-card class="mx-auto" max-width="344" min-height="530px" elevation="5">
+                      <v-img src="@/assets/img/terapiasocial.jpg" height="200px"></v-img>
+                      <v-card-text>
+                        <div class="text-h5 font-weight-bold secondary--text">Estrategia para el Cambio</div>
+                        <p class="text-h4 font-weight-bold mb-2 teal--text">Terapia Social</p>
+                        <div class="text-body-2">
+                          La estrategia socio-pedagógica para el cambio es una metodología que coordina acciones con el objetivo de promover, prevenir y asistir en la evolución personal y social de los individuos.
+                        </div>
+                      </v-card-text>
 
-                    <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal1 = true">Leer Más</v-btn>
-                    </v-card-actions>
+                      <v-card-actions>
+                        <v-btn color="teal darken-2" class="white--text" @click="reveal1 = true">
+                          Leer Más
+                        </v-btn>
+                      </v-card-actions>
 
-                    <v-expand-transition>
-                      <v-card v-if="reveal1" class="position-absolute w-100" style="bottom: 0;">
-                        <v-card-text class="pb-0">
-                          <p class="text-h4">Resumen</p>
-                          <p class="text-medium-emphasis">
-                            A través de esta estrategia, se logran cambios cognitivos específicos y se brinda una adecuada capacitación social, facilitando una evolución saludable en las relaciones interpersonales.
-
-En el ámbito de la socioterapia, se enfoca en el desarrollo del área consciente del individuo. Esto implica capacitar al paciente para superar situaciones socio-problemáticas, promoviendo una convivencia saludable y el desarrollo de recursos personales para una vida familiar y social con bienestar. El proceso incluye la revisión y reconstrucción de la historia personal del paciente, destacando aspectos positivos y modificando los negativos para facilitar el desarrollo de nuevas aptitudes y habilidades sociales.
-                          </p>
-                        </v-card-text>
-                        <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal1 = false">Cerrar</v-btn>
-                        </v-card-actions>
-                      </v-card>
-                    </v-expand-transition>
-                  </v-card>
+                      <v-expand-transition>
+                        <v-card v-if="reveal1" class="position-absolute w-100" style="bottom: 0;">
+                          <v-card-text class="pb-0">
+                            <p class="text-h4">Resumen</p>
+                            <p class="text-body-2">
+                              A través de esta estrategia, se logran cambios cognitivos específicos y se brinda una adecuada capacitación social, facilitando una evolución saludable en las relaciones interpersonales.
+                              En el ámbito de la socioterapia, se enfoca en el desarrollo del área consciente del individuo. Esto implica capacitar al paciente para superar situaciones socio-problemáticas, promoviendo una convivencia saludable y el desarrollo de recursos personales para una vida familiar y social con bienestar. El proceso incluye la revisión y reconstrucción de la historia personal del paciente, destacando aspectos positivos y modificando los negativos para facilitar el desarrollo de nuevas aptitudes y habilidades sociales.
+                            </p>
+                          </v-card-text>
+                          <v-card-actions class="pt-0">
+                            <v-btn color="teal darken-2" class="white--text" @click="reveal1 = false">
+                              Cerrar
+                            </v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </v-expand-transition>
+                    </v-card>
                 </v-col>
 
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/terapiafamiliar.jpg" height="200px"></v-img>
+                <v-col cols="12" md="4" class="mb-4">
+                  <v-card class="mx-auto" max-width="344" min-height="530px">
+                    <v-img src="@/assets/img/terapiafamiliar.jpg" min-height="200px"></v-img>
                     <v-card-text>
-                      <div class="text-h5 font-weight-bold">Fortale la Unidad Familiar</div>
-                      <p class="text-h4 font-weight-black mb-2">Terapia Familiar</p>
+                      <div class="text-h5 font-weight-bold secondary--text">Fortale la Unidad Familiar</div>
+                      <p class="text-h4 font-weight-bold mb-2 teal--text">Terapia Familiar</p>
                       <div class="text-medium-emphasis">
                         La terapia familiar aborda los problemas generados en el contexto de las relaciones familiares o con personas significativas en la vida de las personas.
                       </div>
                     </v-card-text>
 
                     <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal2 = true">Leer Más</v-btn>
+                      <v-btn color="teal darken-2" class="white--text" @click="reveal2 = true">Leer Más</v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
@@ -70,26 +73,26 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
                           </p>
                         </v-card-text>
                         <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal2 = false">Cerrar</v-btn>
+                          <v-btn color="teal darken-2" class="white--text" @click="reveal2 = false">Cerrar</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-expand-transition>
                   </v-card>
                 </v-col>
 
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/terapiapsiquiatrica.jpg" height="200px"></v-img>
+                <v-col cols="12" md="4" class="mb-4">
+                  <v-card class="mx-auto" max-width="344" min-height="530px">
+                    <v-img src="@/assets/img/terapiapsiquiatrica.jpg" min-height="200px"></v-img>
                     <v-card-text>
-                      <div class="text-h5 font-weight-bold">Salud Mental</div>
-                      <p class="text-h4 font-weight-black mb-2">Terapia Psiquiatrica</p>
+                      <div class="text-h5 font-weight-bold secondary--text">Salud Mental</div>
+                      <p class="text-h4 font-weight-bold mb-2 teal--text">Terapia Psiquiatrica</p>
                       <div class="text-medium-emphasis">
                         La terapia psiquiátrica ayuda a diagnosticar, tratar y prevenir trastornos mentales, mejorando el bienestar emocional y la funcionalidad diaria del paciente.
                       </div>
                     </v-card-text>
 
                     <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal3 = true">Leer Más</v-btn>
+                      <v-btn color="teal darken-2" class="white--text" @click="reveal3 = true">Leer Más</v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
@@ -102,26 +105,26 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
                           </p>
                         </v-card-text>
                         <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal3 = false">Cerrar</v-btn>
+                          <v-btn color="teal darken-2" class="white--text" @click="reveal3 = false">Cerrar</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-expand-transition>
                   </v-card>
                 </v-col>
 
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/terapiapsicologica.jpg" height="200px"></v-img>
+                <v-col cols="12" md="4" class="mb-4">
+                  <v-card class="mx-auto" max-width="344" min-height="530px">
+                    <v-img src="@/assets/img/terapiapsicologica.jpg" min-height="200px"></v-img>
                     <v-card-text>
-                      <div class="text-h5 font-weight-bold">Psicoterapia</div>
-                      <p class="text-h4 font-weight-black mb-2">Terapia Psicologica</p>
+                      <div class="text-h5 font-weight-bold secondary--text">Psicoterapia</div>
+                      <p class="text-h4 font-weight-bold mb-2 teal--text">Terapia Psicologica</p>
                       <div class="text-medium-emphasis">
                         La terapia psicológica evalúa y comprende las creencias del paciente y cómo estas se conectan con emociones y eventos personales.
                       </div>
                     </v-card-text>
 
                     <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal4 = true">Leer Más</v-btn>
+                      <v-btn color="teal darken-2" class="white--text" @click="reveal4 = true">Leer Más</v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
@@ -133,26 +136,26 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
                           </p>
                         </v-card-text>
                         <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal4 = false">Cerrar</v-btn>
+                          <v-btn color="teal darken-2" class="white--text" @click="reveal4 = false">Cerrar</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-expand-transition>
                   </v-card>
                 </v-col>
 
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/terapiapsico.jpg" height="200px"></v-img>
+                <v-col cols="12" md="4" class="mb-4">
+                  <v-card class="mx-auto" max-width="344" min-height="530px">
+                    <v-img src="@/assets/img/terapiapsico.jpg" min-height="200px"></v-img>
                     <v-card-text>
-                      <div class="text-h5 font-weight-bold">Terapia Individual</div>
-                      <p class="text-h4 font-weight-black mb-2">Psicoterapeuta</p>
+                      <div class="text-h5 font-weight-bold secondary--text">Terapia Individual</div>
+                      <p class="text-h4 font-weight-bold mb-2 teal--text">Psicoterapeuta</p>
                       <div class="text-medium-emphasis">
                         La psicoterapia individual se presenta como una herramienta esencial y eficaz en el tratamiento de una variedad de problemas emocionales y psicológicos que pueden afectar significativamente la calidad de vida de una persona.
                       </div>
                     </v-card-text>
 
                     <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal5 = true">Leer Más</v-btn>
+                      <v-btn color="teal darken-2" class="white--text" @click="reveal5 = true">Leer Más</v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
@@ -164,26 +167,26 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
                           </p>
                         </v-card-text>
                         <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal5 = false">Cerrar</v-btn>
+                          <v-btn color="teal darken-2" class="white--text" @click="reveal5 = false">Cerrar</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-expand-transition>
                   </v-card>
                 </v-col>
                 
-                <v-col cols="6" md="4">
-                  <v-card class="mx-auto" max-width="344">
-                    <v-img src="@/assets/img/tiposdetratamientos.jpeg" height="200px"></v-img>
+                <v-col cols="12" md="4" class="mb-4">
+                  <v-card class="mx-auto" max-width="344" min-height="530px">
+                    <v-img src="@/assets/img/tiposdetratamientos.jpeg" min-height="200px"></v-img>
                     <v-card-text>
-                      <div class="text-h5 font-weight-bold">Tipos de</div>
-                      <p class="text-h4 font-weight-black mb-2">Tratamientos</p>
+                      <div class="text-h5 font-weight-bold secondary--text">Tipos de</div>
+                      <p class="text-h4 font-weight-bold mb-2 teal--text">Tratamientos</p>
                       <div class="text-medium-emphasis">
                         Tratamiento hospitalario de dia, mediodia, noche y ambulatorio, aqui abajo te descrbiremos cada uno de estos tratamientos.  
                       </div>
                     </v-card-text>
 
                     <v-card-actions>
-                      <v-btn color="teal-accent-4" text variant="text" @click="reveal6 = true">Leer Más</v-btn>
+                      <v-btn color="teal darken-2" class="white--text" @click="reveal6 = true">Leer Más</v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
@@ -203,40 +206,92 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
                         </p>
                         </v-card-text>
                         <v-card-actions class="pt-0">
-                          <v-btn color="teal-accent-4" text variant="text" @click="reveal6 = false">Cerrar</v-btn>
+                          <v-btn color="teal darken-2" class="white--text" @click="reveal6 = false">Cerrar</v-btn>
                         </v-card-actions>
                       </v-card>
                     </v-expand-transition>
                   </v-card>
                 </v-col>
-                  <br>
-                <br>
-                <hr>
-              </br>
-                </v-row>
-                </v-container>
+                
+              </v-row>
+              </v-container>
+              <br>
+              
+              <template>
+                  <v-row align="center" justify="center" dense>
+                    <!-- Primera columna con V-Card -->
+                    <v-col cols="12" md="6">
+                      <v-card class="mx-auto" color="#FFFCFF" dark>
+                        <v-card-title class="black--text">
+                          <h3 class="text-h6"><strong>UNIDAD RESIDENCIAL</strong></h3>
+                        </v-card-title>
+                        <v-divider></v-divider>
+                        <v-card-text class="black--text">
+                          Nuestro centro cuenta con todas las comodidades y servicios. Si eliges esta modalidad, te hospedas en el centro durante un tiempo para recibir tratamiento las 24 horas del día. Es ideal si necesitas un ambiente seguro y estructurado para tu recuperación, especialmente si requieres desintoxicación o apoyo intensivo.
+                        </v-card-text>
+                      </v-card>
+                    </v-col>
+                    
+                    <!-- Segunda columna con V-Card -->
+                    <v-col cols="12" md="6">
+                      <v-card class="mx-auto" color="#247BA0">
+                        <v-card-title class="white--text">
+                          <h3 class="text-h6"><strong>UNIDAD AMBULATORIA</strong></h3>
+                        </v-card-title>
+                        <v-divider></v-divider>
+                        <v-card-text class="white--text">
+                          Este enfoque es ideal para quienes quieren mantener sus responsabilidades diarias mientras reciben apoyo. Proporciona terapias individuales y grupales para aprender habilidades de afrontamiento y promover una vida equilibrada sin interrupciones mayores en tus actividades diarias.
+                        </v-card-text>
+                      </v-card>
+                    </v-col>
+                  </v-row>
                 </template>
+                <br>
+
+              <div class="fixed-whatsapp-button">
+                <v-btn
+                  color="success"
+                  dark
+                  large
+                  @click="redirectToWhatsApp"
+                >
+                  Solicitar Información
+                </v-btn>
+              </div>
+              </template>
+
+              <br>
 
               
-                <h2>.</h2>
+              
+
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-container>
   </section>
+  
 </template>
 
-
-
 <style scoped>
+.fixed-whatsapp-button {
+  position:relative;
+  transform: translate(30%, 50%);
+}
+.v-btn.success {
+  background-color: #25d366 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
+
 #download {
   background-image: url("~@/assets/img/bgDownload.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 500px;
 }
 
 #download .container,
@@ -263,6 +318,7 @@ En el ámbito de la socioterapia, se enfoca en el desarrollo del área conscient
 </style>
 
 <script>
+
 export default {
   data() {
     return {
@@ -274,5 +330,15 @@ export default {
       reveal5: false,
       reveal6: false
     };
-  }
-};</script>
+  },
+
+  methods: {
+    redirectToWhatsApp() {
+      const phoneNumber = "+5491159609798"; // Reemplaza con tu número de teléfono
+      const message = "Buenas, solicito más información sobre sus servicios en 'Renueva Tu Ser'."; // Mensaje predefinido
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    },
+}
+}
+</script>
